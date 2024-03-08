@@ -3,6 +3,36 @@
 OS_NAME="KayraCore"
 PROJECT_DIR=/home/akinozgen/src/quartlinux
 
+init() {
+    # Check for required directories. Create if not exists.
+    if [ ! -d "$PROJECT_DIR/workdir" ]; then
+        mkdir -p $PROJECT_DIR/workdir
+    fi
+
+    if [ ! -d "$PROJECT_DIR/workdir/boot-files" ]; then
+        mkdir -p $PROJECT_DIR/workdir/boot-files
+    fi
+
+    if [ ! -d "$PROJECT_DIR/workdir/chroot" ]; then
+        mkdir -p $PROJECT_DIR/workdir/chroot
+    fi
+
+    if [ ! -d "$PROJECT_DIR/workdir/initramfs" ]; then
+        mkdir -p $PROJECT_DIR/workdir/initramfs
+    fi
+
+    if [ ! -d "$PROJECT_DIR/workdir/linux" ]; then
+        mkdir -p $PROJECT_DIR/workdir/linux
+    fi
+
+    if [ ! -d "$PROJECT_DIR/workdir/busybox" ]; then
+        mkdir -p $PROJECT_DIR/workdir/busybox
+    fi
+    
+}
+
+init();
+
 linux_config() {
     echo "Configuring linux kernel for $OS_NAME..."
     cd $PROJECT_DIR/workdir/linux

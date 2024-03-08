@@ -11,6 +11,8 @@ It is configured to use 8 threads for building the kernel and busybox.
 ### Building
 Clone the linux kernel at workdir/linux and busybox at workdir/busybox. Then use the build.sh script for the tasks.
 
+Dependencies: `bzip2 git vim make gcc libncurses-dev flex bison bc cpio libelf-dev libssl-dev syslinux dosfstools`
+
 ### Tasks
 - `build.sh linux_config` - Configure the linux kernel with menuconfig.
 - `build.sh busybox_config` - Configure busybox with menuconfig.

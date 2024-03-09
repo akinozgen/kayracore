@@ -9,7 +9,10 @@ Be sure to change `build.sh` to your needs. It has `OS_NAME` and `PROJECT_DIR` v
 It is configured to use 8 threads for building the kernel and busybox.
 
 ### Building
-Clone the linux kernel at workdir/linux and busybox at workdir/busybox. Then use the build.sh script for the tasks.
+Repositories to be cloned:
+- linux kernel at `workdir/linux`
+- busybox at `workdir/busybox`
+- bash at `workdir/bash`
 
 Dependencies: `bzip2 git vim make gcc libncurses-dev flex bison bc cpio libelf-dev libssl-dev syslinux dosfstools`
 

@@ -4,3 +4,5 @@ workdir/boot-files/KayraCore.kernel
 workdir/boot-files/KayraCore.cpio
 workdir/linux
 workdir/busybox
+workdir/bash
+workdir/sysvinit
